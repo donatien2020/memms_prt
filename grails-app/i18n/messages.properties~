@@ -1,0 +1,1097 @@
+default.doesnt.match.message=Property [{0}] of class [{1}] with value [{2}] does not match the required pattern [{3}]
+default.invalid.url.message=Property [{0}] of class [{1}] with value [{2}] is not a valid URL
+default.invalid.creditCard.message=Property [{0}] of class [{1}] with value [{2}] is not a valid credit card number
+default.invalid.email.message=Property [{0}] of class [{1}] with value [{2}] is not a valid e-mail address
+default.invalid.range.message=Property [{0}] of class [{1}] with value [{2}] does not fall within the valid range from [{3}] to [{4}]
+default.invalid.size.message=Property [{0}] of class [{1}] with value [{2}] does not fall within the valid size range from [{3}] to [{4}]
+default.invalid.max.message=Property [{0}] of class [{1}] with value [{2}] exceeds maximum value [{3}]
+default.invalid.min.message=Property [{0}] of class [{1}] with value [{2}] is less than minimum value [{3}]
+default.invalid.max.size.message=Property [{0}] of class [{1}] with value [{2}] exceeds the maximum size of [{3}]
+default.invalid.min.size.message=Property [{0}] of class [{1}] with value [{2}] is less than the minimum size of [{3}]
+default.invalid.validator.message=Property [{0}] of class [{1}] with value [{2}] does not pass custom validation
+default.not.inlist.message=Property [{0}] of class [{1}] with value [{2}] is not contained within the list [{3}]
+default.blank.message=Property [{0}] of class [{1}] cannot be blank
+default.not.equal.message=Property [{0}] of class [{1}] with value [{2}] cannot equal [{3}]
+default.null.message=Property [{0}] of class [{1}] cannot be null
+default.not.unique.message=Property [{0}] of class [{1}] with value [{2}] must be unique
+
+default.paginate.prev=Previous
+default.paginate.next=Next
+default.boolean.true=True
+default.boolean.false=False
+default.date.format=yyyy-MM-dd HH:mm:ss z
+default.number.format=0
+
+default.created.message={0} {1} created
+default.updated.message={0} {1} updated
+default.deleted.message={0} {1} deleted
+default.not.deleted.message={0} {1} could not be deleted
+default.not.found.message={0} has not been found with an id {1}
+default.optimistic.locking.failure=Another user has updated this {0} while you were editing
+
+default.home.label=Home
+default.list.label={0} List
+default.add.label=Add {0}
+default.new.label=New {0}
+default.create.label=Create {0}
+default.show.label=Show {0}
+default.edit.label=Edit {0}
+
+default.button.create.label=Create
+default.button.edit.label=Edit
+default.button.update.label=Update
+default.button.delete.label=Delete
+default.button.delete.confirm.message=Are you sure?
+
+
+# Data binding errors. Use "typeMismatch.$className.$propertyName to customize (eg typeMismatch.Book.author)
+typeMismatch.java.net.URL=Property {0} must be a valid URL
+typeMismatch.java.net.URI=Property {0} must be a valid URI
+typeMismatch.java.util.Date=Property {0} must be a valid Date
+typeMismatch.java.lang.Double=Property {0} must be a valid number
+typeMismatch.java.lang.Integer=Property {0} must be a valid number
+typeMismatch.java.lang.Long=Property {0} must be a valid number
+typeMismatch.java.lang.Short=Property {0} must be a valid number
+typeMismatch.java.math.BigDecimal=Property {0} must be a valid number
+typeMismatch.java.math.BigInteger=Property {0} must be a valid number
+
+# default
+default.paginate.prev=Previous
+default.paginate.next=Next
+default.boolean.true=True
+default.boolean.false=False
+default.date.format=yyyy-MM-dd HH:mm:ss z
+default.number.format=0
+
+default.saved.message={0} {1} saved
+default.created.message={0} {1} created
+default.updated.message={0} {1} updated
+default.deleted.message={0} {1} deleted
+default.not.deleted.message={0} {1} could not be deleted
+default.not.found.message={0} not found with id {1}
+default.optimistic.locking.failure=Another user has updated this {0} while you were editing
+
+default.home.label=Home
+default.list.label={0} List
+default.list.suffix.label=List
+default.add.label=Add {0}
+default.new.label=New {0}
+default.create.label=Create {0}
+default.show.label=Show {0}
+default.edit.label=Edit {0}
+default.select.label=Select {0}
+default.number.label=Number of {0}s
+default.export.label=Export
+default.import.label=Import
+
+default.button.create.label=Create
+default.button.edit.label=Edit
+default.button.update.label=Update
+default.button.delete.label=Delete
+default.button.save.label=Save
+default.button.search.label=Search
+default.button.back.label=Back
+
+default.link.edit.label=Edit
+default.link.delete.label=Delete
+default.link.delete.confirm.message=Are you sure?
+default.link.cancel.label=Cancel
+default.link.clear.form.label = Clear
+default.please.select = Please select
+default.on.label = On
+default.link.back.label = Back to the list
+
+# title
+title.memms=MEMMS
+
+# Date format
+default.memms.date.format = dd/MM/yyyy
+
+# headers
+header.navigation.home = Home
+header.manage.help.label = Manage Help
+header.navigation.administration=Administration
+header.navigation.inventory = Inventory
+header.navigation.maintenance = Maintenance
+header.navigation.preventive.maintenance = Preventive Maintenance
+header.navigation.corrective.maintenance = Corrective Maintenance
+header.navigation.reports = Reports
+header.navigation.reports.dashboard = Dashboard
+header.navigation.reports.listing = Detailed Listing
+header.navigation.myaccount = My Account
+header.labels.redmine=Report a bug
+header.labels.login=Log in
+header.labels.logout=Logout
+header.labels.helpdesk=Help
+header.labels.register=Register
+header.labels.moh = Rwanda Ministry Of Health
+header.labels.memms = Medical Equipment Management and Maintenance System
+header.navigation.reports.dashboard=Dashboard
+header.navigation.reports.dsr=district summary
+header.navigation.reports.fct=Facility Count
+header.navigation.manufacturer.and.supplier = Manufacturer and Supplier
+header.navigation.notification.equipment=Inventory Notification
+header.navigation.notification.workOrder=Work Order Notification
+
+# footer
+footer.labels.about=About
+footer.labels.contact=Contact
+footer.labels.helpdesk=HelpDesk
+footer.labels.chai=Clinton Health Access Initiative
+
+# filter
+filter.location.label=Location
+filter.location.noselection.label=Please select a location
+filter.datalocationtype.label=Facility Types
+filter.datalocationtype.empty.label=No filter available at this level
+filter.datalocationtype.checkall=Check all
+filter.datalocationtype.uncheckall=Uncheck all
+filter.datalocationtype.filter=Filter
+filter.datalocationtype.minimum=A minimum of 1 location type is required.
+filter.level.label=Level
+
+#landing page
+landingpage.title=MEMMS - Welcome
+landingpage.welcome.label=What would you like to do?
+landingpage.reports.label=Rapports
+landingpage.planning.label=Planning
+landingpage.survey.label=Survey
+landingpage.admin.label=Admin Site
+
+# entities default
+entity.list.manage.label=Manage
+entity.list.empty.label=No {0} available
+entity.locales.all=View all languages
+entity.search.label=Search {0}
+entity.code.notunique=Code must be unique.
+entity.messages.label = Messages
+
+#login
+login.title=Log in
+login.header.label=Log in
+login.username.label=Username (email)
+login.password.label=Password
+login.rememberme.label=Remember me?
+login.signin.label=Sign in
+login.forgot.password.label=Forgot password?
+
+#Tool Tip Message
+tooltip.click.update.status = Change Status
+
+# my account
+myaccount.title=My Account
+myaccount.header.label=My Account
+myaccount.username.label=Username
+myaccount.firstname.label=First name
+myaccount.lastname.label=Last name
+myaccount.phonenumber.label=Phone number
+myaccount.organisation.label=Organisation
+myaccount.language.label=Default language (will change after login)
+myaccount.password.label=Password
+myaccount.changepassword.link=Change password
+myaccount.username.info=Your username cannot be changed, to change it, please
+myaccount.username.contact.admin=contact an administrator.
+myaccount.save.label=Save account information
+
+# register
+register.title=Register
+register.header.label=Register
+register.firstname.label=First name
+register.lastname.label=Last name
+register.organisation.label=Organisation
+register.phonenumber.label=Phone number
+register.language.label=Preferred language
+register.password.label=Password
+register.repeat.label=Repeat password
+register.email.label=Email Address
+register.register.label=Register
+register.info.text=We will send you an email with instructions on how to confirm your email address, after which we will activate your account.
+
+# new password
+new.password.title=New password
+new.password.header.label=New password
+new.password.password.label=Password
+new.password.repeat.label=Repeat password
+new.password.set.label=Set password
+
+# forgot password
+forgot.password.title=Forgot password
+forgot.password.header.label=Forgot password
+forgot.password.email.label=Email address
+forgot.password.retrieve.label=Retrieve password
+forgot.password.info.text=We will send you an email with the instructions.
+forgot.password.email.subject=MEMMS - Lost password?
+forgot.password.email.body=Dear {0}\n\nTo set a new password, please go to {1}.\n\nYour MEMMS Team.
+forgot.password.successful=An email has been sent with the instructions.
+
+# registration email
+register.account.email.subject=MEMMS - your account has been created - verify email.
+register.account.email.body=Dear {0},\n\nPlease confirm that this email address is yours by following this link: {1}\nSomeone will then review your account and activate it.\n\nYour MEMMS Team.
+register.account.successful=Thanks for registering, you should receive a confirmation email.
+
+# confirmation email
+confirm.account.email.subject=MEMMS - your email address has been verified.
+confirm.account.email.body=Dear {0},\n\nThank you, your email has been verified, someone will review your account and activate it.\nWe will let you know when it is ready.\n\nYour MEMMS Team.
+confirm.account.successful=Your email has been verified. We will review your account and let you know when it is ready.
+
+# activation email
+activate.account.email.subject=MEMMS - your account has been activated.
+activate.account.email.body=Dear {0},\n\nYour email has just been activated by the MEMMS team. You can now login using {1} as username and the password you set when you registered.\nOr follow this URL: {2}\n\nYour MEMMS Team.
+activate.account.successful=The account has been activated and the user notified.
+activate.account.unconfirmed=The account has not been confirmed. Let the user confirm its address and activate later.
+
+# set new password
+set.password.successful=Your new password has been set.
+
+# pages
+about.page.title=About
+helpdesk.page.title=Helpdesk
+upgrade.page.title=Upgrade
+
+# error
+pages.404.title=Oooooops!
+pages.404.content=Oooops, the page you are looking for could not be found.
+
+#Summary
+summary.title.label = {0} - Summary Page
+summary.selectlocation.text = Please select a location to get to the respective {0}.
+
+# import
+import.title=Data Import
+import.nominative.data.label=Nominative Data Import
+import.general.data.label=General Data Import
+import.button.import.label=Import
+import.file.label=File
+import.encoding.label=Encoding
+import.delimiter.label=Delimiter
+import.result.title=Data Import Result
+import.result.message.saved.rows=Number of saved rows
+import.result.message.unsaved.rows=Number of unsaved rows
+import.result.message.error.saved.rows=Number of rows saved with error
+import.result.line=Line Number
+import.result.filename=File Name
+import.result.column=Column
+import.error.message.unknown.location=Location doesn't exist.
+import.error.message.unknown.value.type=Unknown value type.
+import.error.message.unknowm.column.type=Column type not found for header
+import.error.message.enume=Can't find enum match.
+import.error.message.boolean=Value in this cell has to be of type boolean (0 or 1).
+import.error.message.number=Value in this cell has to be a Number.
+import.error.message.string.text=Value in this cell has to be String or empty String.
+import.error.message.date=Value in this cell has to be a valid Date (dd-MM-yyyy).
+import.error.message.data.duplicated=This entry is duplicated and the last value in the list was saved
+import.error.message.unknown.data.location=Unknown Facility
+import.error.message.not.raw.data.element = Not a Data Element
+import.error.message.unknown.header=Header is incorrect
+import.error.message.missing.header=Header is missing
+import.error.message.code.noheader=The code header was not found
+import.error.message.entity.notfound=The corresponding entity was not found
+import.error.message.entity.invalid=The entity could not be validated
+import.error.message.entity.notimportable=The entity is not importable
+import.error.message.boolean = The value has to be boolean (TRUE of FALSE)
+import.error.message.file.type.not.supported=The file type is not allowed
+import.error.message.duplicate.column = This file contains duplicate columns (these can be empty columns)
+
+# exporter
+exporter.download.label = Download
+exporter.clone.label = Clone
+exporter.locations = Locations
+exporter.periods = Periods
+exporter.location.types = Location Types
+exporter.dataelement.label = Data Element
+exporter.calculation.label = Calculation
+exporter.create.on = Created On
+exporter.clone.failed = Clone failed
+exporter.cloned = Exporter Cloned
+
+#Inventory
+inventory.label = Inventory
+inventory.equipment.count=Equipments
+inventory.add.equipment.label=Add
+inventory.manage.equipment.label=Manage
+inventory.summary.title=Inventory - Summary Page
+inventory.summary.selectlocation.text=Please select a location to get to the respective inventory.
+
+
+#CorrectiveMaintenance
+correctiveMaintenance.workOrder.count=WorkOrders
+correctiveMaintenance.manage.workOrder.label=Manage
+correctiveMaintenance.summary.title=Corrective Maintenance - Summary Page
+correctiveMaintenance.summary.selectlocation.text=Please select a location to get to the respective corrective maintenances.
+
+#Entities
+# entity properties
+entity.id.label=Id
+entity.filter.label=Filter
+entity.status.label = Status
+entity.export.label = Export
+entity.name.label=Name
+entity.names.label=Names
+entity.action.name.label = Action name
+entity.action.details.label =  Action details
+entity.description.label=Description
+entity.descriptions.label=Descriptions
+entity.comment.label = Comment
+entity.comments.label =Comments
+entity.observation.label=Observation
+entity.observations.label=Observations
+entity.order.label=Order
+entity.code.label=Code
+entity.type.label=Type
+entity.at.label = at
+entity.status.label = Status
+entity.error.updating.try.again = Failed try again
+entity.please.select = Please select
+entity.in.system.since.label = In the system since
+entity.filter.message.label = Showing filtered list of {0} which contain search term "{1}"
+entity.manufacturer.label= Manufacturer
+entity.discontinued.date.label= Discontinued Date
+entity.part.number.label=Part Number
+entity.datalocationtype.label=Location type
+
+#entities default
+entity.list.manage.label=Manage
+entity.list.empty.label=No {0} available
+entity.locales.all=View all languages
+entity.search.label=Search {0}
+entity.date.format.time.label = (Day-Month-Year Hour : Minute)
+entity.date.format.date.label  = (Day-Month-Year)
+
+#Command Objects
+# register command
+registerCommand.firstname.blank=Please enter your first name.
+registerCommand.lastname.blank=Please enter your last name.
+registerCommand.organisation.blank=Please enter your last name.
+registerCommand.phoneNumber.blank=Please enter your phone number.
+registerCommand.email.blank=Please enter your email address.
+registerCommand.email.email.invalid=Please enter a valid email address.
+registerCommand.email.validator.invalid=This email address is already in use.
+registerCommand.password.blank=Please enter a password.
+registerCommand.password.minSize.notmet=The password must be at least 4 characters long.
+registerCommand.repeat.validator.invalid=The passwords do not match.
+register.command.UserRoleType.data.clerk=Data Clerk
+register.command.UserRoleType.admin=Admin
+register.command.UserRoleType.other=Other
+register.command.UserRoleType.none=None
+register.role.label=Role
+
+# retrieve password command
+retrieve.password.command.email.blank=Please enter your email address.
+retrieve.password.command.email.validator.invalid=No user has been found with that email address.
+
+# new password command
+new.password.command.password.blank=Please enter a password.
+new.password.command.password.minSize.notmet=The password must be at least 4 characters long.
+new.password.command.repeat.validator.invalid=The passwords do not match.
+
+#StatusCommand
+statusCommand.status.not.inList=Please select status.
+statusCommand.dateOfEvent.nullable=Please enter status.
+
+#Filter Command
+filterCommand.dataLocation.select.atleast.one.value.text=Please, select at least one filter
+obsolete.boolean.true=obsolete
+obsolete.boolean.false=not obsolete
+
+#FilterNotification command
+notification.date.from.label=From date
+notification.date.to.label=To date
+
+#ExpectedLifeTimeCommand
+typeMismatch.ExpectedLifeTimeCommand.expectedLifeTime_months=Months must be numbers
+typeMismatch.ExpectedLifeTimeCommand.expectedLifeTime_years=Years must be numbers
+entity.years.label=Years
+entity.months.label=Months
+entity.hours.label=Hours
+entity.minutes.label=Minutes
+entity.expectedLifeTime.label=Expected Life Time
+entity.show.hide.filter.label = Show / Hide filters
+
+# tasks
+task.label=Task
+task.user.label=User
+task.class.label=Type of task
+task.information.label=Information
+task.calculate.data.notfound=Data element not found
+task.senttoqueue.label=Sent to queue for processing
+task.numberoftries.label=Number of tries
+task.status.label=Status
+task.added.label=Date added
+task.delete.completed=Delete all completed tasks
+task.creation.success=Task was successfully added to the queue, check the <a href="{0}">task list</a> for progress.
+task.creation.notunique.error=Task has already been added to the task queue, check the <a href="{0}">task list</a> for progress.
+task.creation.validation.error=Could not create task.
+task.output.download.label=Download output
+task.aborting.message=Task was aborted
+task.progress.bar.label=Progress
+
+#User
+user.label = User
+user.filter.label= Filter User
+active.boolean.true=Active
+active.boolean.false=Not active
+confirmed.boolean.true=Confirmed
+confirmed.boolean.false=Not confirmed
+users.label = Users
+user.manage.users.label = Manage Users
+user.username.label=Username
+user.firstname.label=First name
+user.lastname.label=Last name
+user.email.label=Email
+user.permission.label=Permission
+user.phonenumber.label=Phone Number
+user.password.label=Password
+user.repeat.password.label=Repeat Password
+user.confirmed.label=Confirmed
+user.organisation.label=Organization
+user.active.label=Active
+user.type.label=User Type
+
+user.type.technician.dh=Technician DH
+user.type.technician.mmc=Technician MMC
+user.type.titulaire.hc=Titulaire HC
+user.type.department.hospital=Hospital Department
+user.type.assistant.tech.hosp = Assistant Technician
+user.type.none=Please select a user type
+
+user.type.admin=Administrator
+user.type.dataclerk=Data Clerk
+user.type.technician.facility=Technician facility
+user.type.technician.moh=Technician MoH
+user.type.system=System
+user.type.other=Other
+user.username.blank=Please enter username
+user.username.nullable=Please enter username
+user.username.unique=Please enter a unique username
+user.uuid.blank=Please enter uuid
+user.uuid.nullable=Please enter uuid
+user.uuid.unique=Please enter a unique uuid
+user.lastname.blank=Please enter last name
+user.lastname.nullable=Please enter last name
+user.firstname.blank=Please enter first name
+user.firstname.nullable=Please enter first name
+user.organisation.blank=Please enter organization
+user.organisation.nullable=Please enter organization
+user.phoneNumber.blank=Please enter phone number
+user.phoneNumber.nullable=Please enter phone number
+user.permissionString.nullable=Please enter permissions
+user.email.email.invalid=Please enter a valid email
+user.email.unique=Please enter a unique email
+user.userType.blank=Please select a user type
+user.userType.nullable=Please select a user type
+user.active.validator.error=Invalid active value
+
+user.usertype.label=User type
+user.roles.label=Roles
+user.cannot.be.delete =  A user cannot be deleted deactivate him instead
+
+#Role
+role.label = Role
+roles.label = Roles
+role.name.label=Name
+role.permissions.label=Permissions
+role.manage.label=Manage Roles
+role.name.blank=Please enter role name
+role.name.nullable=Please enter role name
+role.name.unique=Please enter a unique role name
+role.permissionString.blank=Please enter some permissions for the role
+role.permissionString.nullable=Please enter some permissions for the role
+
+#Currency
+currency.NONE = Select
+currency.USD = USD
+currency.EUR = EUR
+currency.RWF = RWF
+
+#Equipment
+equipment.label = Equipment
+equipment.code.label=Code
+equipment.details.label = Equipment details
+equipment.purchaser.label = Purchaser
+equipment.donor.label = Donor
+equipment.donor.name.label = Donor Name
+equipment.serial.number.label=Serial Number
+equipment.purchase.cost.label=Purchase Cost
+equipment.estimated.cost.label=Estimated Cost
+equipment.observations.label=Observation
+equipment.model.label=Model
+equipment.room.label=Room
+equipment.expected.life.time.label=Expected Life Time
+equipment.donation.label=Donation
+equipment.donate.label=Donate
+equipment.obsolete.label=Obsolete
+equipment.manufacture.date.label=Manufacture Date
+equipment.purchase.date.label=Purchase Date
+equipment.registered.on.label=Registered On
+equipment.section.basic.information.label = Basic Information
+equipment.section.manufacturer.information.label = Manufacturer Information
+equipment.section.supplier.information.label = Supplier Information
+equipment.section.status.information.label = Status Information
+equipment.section.warranty.information.label = Warranty Information
+equipment.warranty.period.label = Warranty Duration
+equipment.same.as.supplier.label = Warranty by Supplier
+equipment.currency.label = Currency
+equipment.export.label=Export Equipments
+equipment.type.nullable=Please select an equipment type
+equipment.expectedLifeTime.nullable=Please enter an equipment expected life time
+equipment.serialNumber.blank=Please enter a serial number
+equipment.serialNumber.unique=Serial number not unique
+equipment.department.nullable=Please select a department
+equipment.manufacturer.nullable=Please select a manufacturer
+equipment.manufactureDate.nullable=Please select a manufacture date
+equipment.manufactureDate.validator.error=Manufacture date invalid, has to be a past date
+equipment.supplier.nullable=Please select a supplier
+equipment.purchaseDate.nullable=Please select a purchase date
+equipment.purchaseDate.validator.error=Purchase date invalid
+equipment.purchaseCost.validator.error=Purchase cost is invalid,(only specify it if it's not a donation)
+equipment.currency.validator.error=Currency is invalid,(only specify it if it's not a donation)
+equipment.currency.not.inlist=Currency not known
+equipment.registeredOn.nullable=Please enter the registration date
+equipment.donation.nullable=Please specify the donation status
+equipment.obsolete.nullable=Please specify the absolete status
+equipment.filter.label = Filter Equipment
+equipment.new.request.label=Request new equipment registration
+equipment.category.label=Equipment category
+
+#Equipment purchaser
+equipment.purchased.by.facility = Facility
+equipment.purchased.by.moh = Ministry of Health
+equipment.purchased.by.donor = Donor
+equipment.purchased.none = Please select
+
+#Equipment donor
+equipment.donor.individual = Individual
+equipment.donor.others = Others
+equipment.donor.moh.partner = MoH Partner
+equipment.donor.other.ngo = Other NGO
+equipment.donor.none = Please select
+
+#EquipmentStatus
+equipment.status.label= Status
+equipment.status.change.date.label= Change Date
+equipment.status.changed.by.label= Changed By
+equipment.status.value.label= Value
+equipment.status.current.label= Current
+equipment.status.under.maintenance = Under Maintenance
+equipment.status.operational = Operational
+equipment.status.partially.operational = Partially Operational
+equipment.status.in.stock = In Stock
+equipment.status.for.disposal = For Disposal
+equipment.status.none = Please select
+equipment.status.disposed = Disposed
+equipment.status.date.of.event.label = Date of Event
+equipment.status.recordedon.label = Recorded On
+equipmentStatus.dateOfEvent.nullable=Please enter date
+equipmentStatus.dateOfEvent.validator.error=Invalid date
+equipmentStatus.statusChangeDate.nullable=Please enter date
+equipmentStatus.statusChangeDate.validator.error=Invalid date
+equipmentStatus.status.nullable=Please select status
+equipmentStatus.status.blank=Please select status
+equipmentStatus.status.not.inlist=Please select status
+equipment.status.reason = Reason
+equipment.status.current.status = Current status
+equipment.provider.startDate.label = Contract Start Date
+equipment.provider.period.label = Period
+
+#Order
+order.section.basic.information.label = Basic Information
+order.section.occurance.information.label =  Occurance Information
+order.open.on.label = Opened On
+order.closed.on.label = Closed On
+
+
+#PreventiveOrder
+preventive.order.label = Preventive Order
+preventive.orders.label = Preventive Orders
+preventive.order.type.label = Type
+preventive.order.open.on.label = Open On
+preventive.order.closed.on.label = Closed On
+preventive.order.added.by.label = Added By
+preventive.order.type.duration.based = Duration Based
+preventive.order.type.work.based = Work Based
+preventive.order.status.open =  Open
+preventive.order.status.closed =  Closed
+preventive.order.filter.label = Preventive Order Filter
+preventive.order.type.none =  Please select
+preventive.order.prevention.responsible.label= Person in Charge
+preventive.order.last.modified.by.label =  Last Modified By
+
+preventive.occurance.type.none = Select Occurency
+preventive.occurance.type.days_of_week = Days of week (specify)
+preventive.occurance.type.daily = Daily
+preventive.occurance.type.weekly = Weekly
+preventive.occurance.type.monthly = Monthly
+preventive.occurance.type.yearly = Yearly
+preventive.occurance.label = Occurency
+preventive.occurance.interval.label = Interval
+preventive.next.occurence.label = Date of next occurence
+
+preventive.interval.type.none = Select Occurency
+preventive.interval.type.hours = Hours
+preventive.interval.type.days = Day(s)
+preventive.interval.type.weeks = Week(s)
+preventive.interval.type.months = Month(s)
+preventive.interval.type.years = Year(s)
+
+preventive.repeats.label  = Repeats
+preventive.starts.on.label  = Starts On
+preventive.repeats.on.label = Repeats On
+preventive.repeats.every.label =  Repeats Every
+preventive.order.see.list.label = See the list of preventive order
+
+preventive.order.calendar.label = Duration Based Order Projection Summary
+preventive.order.view.mapper.label = View Mapper
+preventive.order.view.mapper.tip.label = Click on the view mapper button to view projection of current month and next months
+preventive.order.mapper.tip.label = Note: This projection is only for Duration based order as workbased order cannot be projected.
+
+#Prevention
+prevention.label = Prevention
+prevention.in.charge.none =  Please select
+prevention.in.charge.hc.technician = Maintenance Technician
+prevention.in.charge.hc.titulaire = Health Center Titulaire
+prevention.in.charge.service.provider = Service Provider
+prevention.in.charge.department.user = Department User
+prevention.order.see.list.label = See the list of prevention
+prevention.section.basic.information.label =  Basic Information
+prevention.scheduled.on.label = Scheduled on
+prevention.event.date.label = Date of event
+prevention.time.spend.label = Time spent
+prevention.section.process.information.label = Prevention Process Information
+prevention.processes.label = Processes
+prevention.eventDate.nullable = Date of Event cannot be null
+prevention.scheduledOn.nullable = Scheduled date cannot be null
+prevention.work.time.label = Time required to do prevention :
+prevention.scheduled.on.label = Scheduled on :
+
+
+
+#EquipmentModel
+equipmentModel.code.nullable=Please enter equipment model's code.
+equipmentModel.code.unique=Equipment model's code not unique.
+
+#EquipmentType
+equipment.type.label = Equipment Type
+equipment.type.used.in.memms =  Used in memms
+equipment.type.retired =  Retired
+equipment.type.too.detailed =  Too Detailed
+equipment.type.not.in.scope =  Not In Scope
+equipment.type.added.on.label = Added On
+equipment.type.last.modified.on.label = Last Modified On
+equipment.type.details.label =  Equipment Type Details
+equipment.type.none =  Please select
+equipmentType.code.blank=Please enter department code.
+equipmentType.expectedLifeTime.label = Expected Life Time
+equipmentType.expectedLifeTime.nullable=Please enter expected life time.
+equipmentType.code.unique=Department's code not unique.
+equipmentType.addedOn.nullable=Please enter date added.
+equipmentType.addedOn.validator.error=Date invalid, should be a past date
+equipmentType.addedOn.nullable=Please enter date added.
+equipmentType.addedOn.validator.error=Date invalid, should be a past date
+equipmentType.observation.nullable=Please select an observation.
+equipmentType.observation.not.inlist=Please select an observation
+equipmentType.compatible.equipment.types.label=Compatible Equipment Types
+
+
+#WorkOrder
+work.order.label = Work Order
+work.orders.label = Work Orders
+work.order.section.people.involved.label = People Involved
+work.order.section.failure.reason.information.label = Cause of failure and Tests results
+work.order.section.maintenance.information.label = Maintenance Process Information
+work.order.criticality.label = Criticality
+work.order.criticality.normal = Normal
+work.order.criticality.low = Low
+work.order.criticality.none = Please select
+work.order.criticality.high = High
+work.order.status.open.at.fosa = Open at Facility
+work.order.status.open.at.mmc = Open at MMC
+work.order.status.none = Please select
+work.order.status.closed.fixed = Closed fixed
+work.order.status.closed.for.disposal = Closed for disposal
+work.order.status.changed.on.label	= Changed On
+work.order.status.changed.by.label	= Changed By
+work.order.status.escalation.label = Escalation
+work.order.reported.by.label = Reported by
+work.order.last.modified.by.label = Last modified by
+work.order.estimated.cost.label = Estimated cost
+work.order.performed.action.label = Performed Action
+work.order.materials.used.label = Materials Used
+work.order.escalate.issue.label = Escalate issue
+work.order.escalate.issue.link.label = Escalate
+work.order.request.assistance.mmc.label = Request Assistance from MMC
+work.order.assistance.request.label = MMC Assistance Requested
+work.order.description.label = Description
+work.order.work.time.label = Time required to fix the equipment
+work.order.travel.time.label = Time required to travel
+work.order.failure.reason.label = Reason of equipment failure
+work.failure.reason.not.specified = Please Select
+work.failure.reason.misuse = Misuse
+work.failure.reason.spare.part.broken = Spare part broken
+work.failure.reason.other = Other
+work.order.failure.reason.details.label = Details on the reason of failure
+work.order.test.results.descriptions.label = Description of test results
+work.order.returned.on.label = Date on which the equipment was returned on site
+work.order.returned.to.label = Name of the person on facility who received the equipment
+work.order.equipment.fixed.by.label = Technician in charge of fixing the equipment
+work.order.equipment.received.by.label = Technician who received the equipment at MMC
+work.order.see.list.label = See the list of work order
+work.order.filter.label = Filter Work Order
+
+#Comment
+work.order.comment.label = Write a comment{0}
+work.order.comment.label.alt = Comment{0}
+
+#Notification
+notification.label= Notification
+notification.equipment.label=Inventory Natification
+notification.workOrder.label=WorkOrder Natification
+notification.sender.label=Sent By
+notificationreceiver.label=Received By
+notification.writtenOn.label=Written On
+notification.content.label=Content
+notification.read.label=Read
+notification.equipment.read.label=Read Inventory Notification
+notification.workOrder.read.label=Read WorkOrder Notification
+notification.filter.label= Filter Notification
+
+notification.work.order.label = Work Order Notification
+
+#Provider
+provider.label = Provider
+provider.type.manufacturer = Manufacturer
+provider.type.supplier = Supplier
+provider.type.none = Please select
+provider.type.both = Manufacturer and Supplier
+provider.manufacturers.label=Manufacturers
+provider.suppliers.label=Suppliers
+provider.manufacturer.details = Manufacturer Details
+provider.supplier.details = Supplier Details
+provider.code.blank=Please enter provider's code.
+provider.code.unique=Provider's code not unique.
+provider.type.not.inList=Please select provider type.
+provider.type.nullable=Please select provider type.
+provider.contact.nullable=Please enter provider's contact.
+provider.type.serviceProvider = Service Provider
+provider.serviceProvider.details = Service Provider Details
+provider.vendors.label = Vendors
+
+#Contact
+contact.contact.label=Contact
+contact.address.descriptions.label= Address Description
+contact.email.label=Email
+contact.phone.label=Phone
+contact.pobox.label=PO Box
+contact.street.label=Street
+contact.city.label = City
+contact.country.label = Country
+contact.address.label = Address
+
+#Warranty
+warranty.label=Warranty
+warranty.start.date.label= Start date
+warranty.end.date.label= End date
+warranty.descriptions.label= Descriptions / Comments
+warranty.numberOfMonth.nullable= Please enter number of months
+
+#EquipmentModel
+equipment.model.label=Model
+equipmentModel.code.nullable=Please enter equipment model's code.
+equipmentModel.code.unique=Equipment model's code not unique.
+
+#EquipmentType
+equipment.type.label = Equipment Type
+equipment.type.used.in.memms =  Used in memms
+equipment.type.retired =  Retired
+equipment.type.too.detailed =  Too Detailed
+equipment.type.not.in.scope =  Not In Scope
+equipment.type.added.on.label = Added On
+equipment.type.last.modified.on.label = Last Modified On
+equipment.type.details.label =  Equipment Type Details
+equipment.type.none =  Please select
+equipmentType.code.blank=Please enter department code.
+equipmentType.expectedLifeTime.label=Expected Life Time (months)
+equipmentType.expectedLifeTime.nullable=Please enter expected life time.
+equipmentType.code.unique=Department's code not unique.
+equipmentType.addedOn.nullable=Please enter date added.
+equipmentType.addedOn.validator.error=Date invalid, should be a past date
+equipmentType.addedOn.nullable=Please enter date added.
+equipmentType.addedOn.validator.error=Date invalid, should be a past date
+equipmentType.observation.nullable=Please select an observation.
+equipmentType.observation.not.inlist=Please select an observation
+
+# SparePartType
+spare.part.type.label = Spare Part Type
+spare.part.type.added.on.label=Added On
+spare.part.type.last.modified.on.label=Last Modified On
+sparePartType.code.blank=Please enter a code.
+sparePartType.partNumber.blank=Please enter a part number.
+sparePartType.manufacturer.nullable=Please select a manufacturer.
+sparePartType.manufacturer.not.inlist=Please select a manufacturer in the list.
+sparePartType.code.unique=The code must be unique.
+sparePartType.quantity.in.stock.label=Quantity in Stock
+sparePartType.estimated.date.stockout.label=Estimated Date Stock Out
+
+
+#
+
+
+#Department
+department.label=Department
+department.code.blank=Please enter department code.
+department.code.unique=Please enter a unique code.
+
+#CalculationLocation
+calculation.location.label=Calculation Location
+calculation.location.coordinates.label=Coordinates
+calculation.location.display.label=Health Facility
+
+#DataLocationType
+datalocation.type.label=Facility Type
+dataLocationType.code.blank=Please enter facility type code.
+datalocationtype.label=Location data type
+datalocation.label = Data location
+datalocation.type.label=Location type
+datalocation.location.label=Location
+location.label=Location
+location.level.label=Location level
+location.parent.label=Parent location
+locationlevel.label=Location level
+
+#DataLocation
+datalocation.label = Health Facility
+dataLocation.code.blank=Please enter facility code.
+dataLocation.type.nullable=Please select facility type.
+dataLocation.location.nullable=Please select facility.
+datalocationtype.defaultselected.label=Selected by default
+dataLocation.manages.label=Manages
+dataLocation.managed.by.label=Managed By
+
+#LocationLevel
+location.level.label=Location Level
+locationLevel.code.blank=Please enter location level code.
+
+#Location
+location.label=Location
+location.parent.label=Parent location
+location.child.label=Child location
+location.code.blank=Please enter location code.
+location.level.nullable=Please select a location level.
+
+#Spare part
+header.navigation.sparePart=Spare Part
+header.navigation.spareParts=Spare Parts
+spare.part.code.label=Spare Part Number
+spare.part.status.label=Status
+spare.part.same.as.manufacturer.label=Warranty provider same as manufacturer
+spare.part.purchaser.label=Purchaser
+spare.parts.label=Spare Parts
+
+spare.part.status.pending.order=Pending Order
+spare.part.status.operational=Operational
+spare.part.status.in.stock=In Stock
+spare.part.status.none=Please select
+spare.part.status.disposed=Disposed
+
+spare.part.purchased.none=Please select
+spare.part.purchased.by.moh=Ministry of Health
+spare.part.purchased.by.donor= Donor
+spare.part.purchased.by.facility=Facility
+spare.part.purchased.by.mmc=MMC
+spare.part.purchased.by.partner=Development Partner
+spare.part.same.as.supplier.label= Warranty contacts same as supplier
+spare.part.purchase.cost.label= Cost
+spare.part.estimated.cost.label= Estimated Cost
+spare.part.sparePartPurchasedBy.label= Purchased By
+spare.part.purchase.date.label= Purchase Date
+spare.part.manufacture.date.label= Manufacture Date
+spare.part.status.date.of.event.label= Status Date of Event
+spare.part.serial.number.label= Serial Number
+
+spare.part.label=Spare Part
+spare.part.new.label=Spare Part
+spare.part.warranty.period.label= Warranty duration
+spare.part.status.current.status= Current Status
+spare.part.status.date.of.event.label=Date of Event
+spare.part.status.label=Status
+
+spare.part.section.basic.information.label=Spare Part Basic Information
+spare.part.details.label=Spare Part Details
+spare.part.type.label=Spare Part Type
+spare.part.status.recordedon.label=Recorded On
+spare.part.status.current.label=Current Status
+spare.part.status.of.spare.part.label= Spare part status
+spare.part.status.of.spare.part.date.of.event.label=Date of event
+spare.part.status.of.spare.part.reason= Reason
+spare.part.status.of.spare.part.recordedon.label= Recorded On
+spare.part.status.of.spare.part.current.label=Current Status
+spare.part.type.details.label= Spare Part Type Details
+spare.part.filter.label = Spare Part Filter
+spare.part.type.manufacturer.label = Manufacturer information
+spare.part.type.manufacturer.code.label = Code
+spare.part.type.manufacturer.type.label = Type
+
+#Spare Part Validator
+sparePart.type.nullable= Spare part type cannot be null. Please, select a spare part type
+sparePart.serialNumber.nullable= Serial Number cannot be null. Please, enter valid value!
+sparePart.serialNumber.validator.error= Invalid Serial Number . Please, enter valid value!
+sparePart.serialNumber.blank=Please enter a serial number
+sparePart.serialNumber.unique=Serial number not unique
+sparePart.sparePartStatus.not.inlist= Please, select a valid value of spare part status
+sparePart.supplier.none= Please select purchaser.
+sparePart.supplier.nullable= Please enter purchaser.
+sparePart.supplier.not.inlist= Please, select a valid purchaser.
+sparePart.expectedLifeTime.nullable=Please enter an spare part expected life time.
+sparePart.manufactureDate.nullable=Please select a manufacture date
+sparePart.manufactureDate.validator.error=Manufacture date invalid, has to be a past date.
+sparePart.supplier.nullable=Please select a supplier
+sparePart.purchaseDate.nullable=Please select a purchase date.
+sparePart.purchaseDate.validator.error=Invalid Purchase date.
+sparePart.purchaseCost.validator.error=Invalid purchase cost.
+sparePart.currency.validator.error=Invalid currency.
+sparePart.currency.not.inlist=Unknown currency.
+sparePart.dateCreated.nullable=Please enter the registration date.
+statusCommand.statusOfSparePart.not.inList=Please select status.
+sparePart.sparePartPurchasedBy.not.inList= Please, select a valid value of supplier
+sparePart.stockLocation.not.inList= Please, select a valid value of stock location
+sparePart.dataLocation.validator.error=Please select a data location
+date.of.event.before.purchase.date= Date of event cannot be before purchase date
+spare.part.stockLocation.label= Stock Location
+stock.location.none= Select
+stock.location.mmc=MMC
+stock.location.facility=Facility
+spare.part.in.stock.quantity = In stock quantity
+spare.part.initial.quantity = Initial quantity
+spare.part.used.quantity = Used quantity
+spare.part.dataLocation.label=Facility
+spare.part.names.label= Names
+spare.part.location.label=Location
+spare.part.data.location.label= Data Location
+spare.part.room.label= Room
+spare.part.shelf.label= Shelf
+spare.part.used.on.equipment.label= Equipment
+entity.comments.label=Comments
+error.cannot.modify.disposed.spare.part=Cannot modify a disposed spare part, please change its status first
+spare.part.assign.equipment.link.label=Assign Equipment
+spare.part.arrive.in.stock.link.label=Spare part arrived in stock
+sparePart.stockLocation.validator.error=Please select stock location
+same.as.manufacturer.boolean.true=True
+same.as.manufacturer.boolean.false=False
+
+# Detailed Listing Customized Reports Wizard
+reports.create.customized.report= Create customized report
+reports.select.customized.report= Select the type of customized report
+reports.apply.filters= Apply filters
+reports.select.optional.information= Select optional information to display
+reports.step= Step <b>{0}</b> of <b>{1}</b>
+reports.step.previous= Previous Step
+reports.step.next= Next Step
+reports.step.submit= Create customized report
+reports.type.label= Report Type
+reports.pleaseSelect = Please Select
+reports.type.inventory= Inventory
+reports.type.corrective= Corrective Maintenance
+reports.type.preventive= Preventive Maintenance
+reports.type.spareParts= Spare Parts
+reports.subType.label= Report SubType
+reports.subType.inventory= List of Inventory
+reports.subType.workOrders= List of Work Orders
+reports.subType.statusChanges= List of Status Changes
+reports.subType.useRate= Spare Part Use Rate
+reports.subType.stockOut= Forecasted Stock Out
+reports.filters.none = N/A
+
+reports.dataLocation= Facilities
+reports.department= Departments
+reports.equipmentType= Equipment Types
+reports.sparePartType= Spare Part Types
+reports.cost= Cost
+reports.currency= Currency
+reports.selectAll= Select All
+reports.workOrderStatus= Work Order Status
+reports.workOrderPeriod= Work Order Period
+reports.statusChanges= Status Changes
+reports.statusChangesPeriod = Status Changes Period
+reports.inventory.warranty= Include equipment under warranty
+reports.inventory.warranty.label= Under warranty
+
+reports.inventory.inventory.equipmentStatus= Equipment Status
+reports.inventory.inventory.acquisitionPeriod= Equipment Acquisition Period
+reports.inventory.inventory.noAcquisitionPeriod.label= Without acquisition date
+reports.inventory.inventory.noAcquisitionPeriod= Include equipment without acquisition date
+reports.inventory.inventory.obsolete= Include only obsolete equipment
+reports.inventory.inventory.obsolete.label= Obsolete equipment
+reports.inventory.statusChanges.newEquipment= New equipment
+reports.inventory.statusChanges.disposedEquipment= Disposed equipment
+reports.inventory.statusChanges.equipmentFromStockToOperational= Equipment from stock to operational
+reports.inventory.statusChanges.equipmentForMaintenance= Equipment for maintenance
+
+reports.corrective.statusChanges.newOrder= New order
+reports.corrective.statusChanges.orderEscalatedToMmc= Order escalated to MMC
+reports.corrective.statusChanges.equipmentReceivedFromMmcFixed= Equipment received from MMC (fixed)
+reports.corrective.statusChanges.equipmentReceivedFromMmcNotFixed= Equipment received from MMC (not fixed)
+reports.corrective.statusChanges.closedOrderFixed= Closed order (fixed)
+reports.corrective.statusChanges.closedOrderNotFixed= Closed order (not fixed)
+
+reports.preventive.workOrders.whoIsResponsible= Who is responsible?
+
+reports.spareParts.inventory.sparePartStatus= Spare Part Status
+reports.spareParts.inventory.acquisitionPeriod= Spart Part Acquisition Period
+reports.spareParts.inventory.noAcquisitionPeriod= Include spare part without acquisition date
+reports.spareParts.stockOut= Include only spare part types with forecasted stock out
+reports.spareParts.stockOut.within= within
+reports.spareParts.stockOut.months= month(s)
+
+# Listing Detailed Reports
+spare.part.export.label=Spare Part Export
+filter.datalocation.label= Data Location
+spare.part.summary.title= Spare parts
+
+#Listing report
+default.report.label=Report
+default.all.equipments.label= All equipments
+default.obsolete.label= Obsolete equipments
+default.disposed.label= Disposed equipments
+default.under.waranty.label= Under warranty equipments
+default.under.maintenance.label= Under maintenance equipments
+default.in.stock.label= In stock equipments
+default.equipment.code.label=Equipment code
+default.equipment.serial.number.label=Equipment serial number
+default.equipment.type.label=Equipment type
+default.work.order.last.month.label=Last month work orders
+default.work.order.escalated.to.mmc.label= Work orders escalated to MMC
+default.equipments.with.maintenance.plan.label= Equipment with maintenance plan
+default.work.order.delayed.label=Work orders delayed
+
+#Dashboard report
+userDefinedVariable.indicator.label=Indicator
+indicator.label=Indicators
+indicatorCategory.label=Indicator categories
+userDefinedVariable.label=User defined variables
+header.navigation.reports.dashboard=Dashboard
+default.reports.dashboard.filter.by.color.label=Filter by indicator color
+default.reports.dashboard.label=Indicators dashboard
+indicator.category.label=Category
+indicator.code.label=Code
+indicator.description.label=Description
+indicator.formula.label=Formula
+indicator.historicalPeriod.label=Historical period
+indicator.historyItems.label=Historical values
+indicator.label=Indicator
+indicator.name.label=Name
+indicator.queryScript.label=Query script
+indicator.redToYellowThreshold.label=Red-yellow threshold
+indicator.sqlQuery.label=SQL Query
+indicator.unit.label=Unit
+indicator.yellowToGreenThreshold.label=Yellow-green threshold
+indicatorCategory.code.label=Code
+indicatorCategory.label=Indicator category
+indicatorCategory.name.label=Name
+indicatorCategory.redToYellowThreshold.label=Red-yellow threshold
+indicatorCategory.yellowToGreenThreshold.label=Yellow-green threshold
+userDefinedVariable.code.label=Code
+userDefinedVariable.currentValue.label=Current value
+userDefinedVariable.label=User defined variable
+userDefinedVariable.name.label=Name
+locationReport.historicalPeriod.monthly=Monthly
+locationReport.historicalPeriod.quarterly=Quarterly
+locationReport.historicalPeriod.yearly=Yearly

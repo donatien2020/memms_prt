@@ -75,6 +75,9 @@ import org.chai.memms.spare.part.SparePart.SparePartPurchasedBy;
 import org.chai.memms.spare.part.SparePart.SparePartStatus;
 import org.chai.memms.inventory.EquipmentStatus.Status;
 import org.chai.memms.spare.part.SparePart.StockLocation;
+import org.chai.memms.reports.dashboard.IndicatorCategory
+import org.chai.memms.reports.dashboard.Indicator
+import org.chai.memms.reports.dashboard.UserDefinedVariable
 
 import org.chai.memms.util.Utils;
 import org.chai.memms.TimeDate;
@@ -117,6 +120,21 @@ public class Initializer {
 	static final String KAYONZA = "Kayonza HC"
 	static final String RUHINDO = "Ruhindo HC"
 	
+    
+    public static createCategories(){
+         IndicatorCategory category1=new IndicatorCategory(code:"corrective",name:"Corrective maintenance",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
+         Indicator indicator1=new Indicator(code:"",name:"",description:"",formula:"",unit:"",redToYellowThreshold:"",yellowToGreenThreshold:"",historicalPeriod:"",historyItems:"",queryScript:"",sqlQuery:1,active:1,groupName:"",groupQueryScript:"").save(failOnError: true, flush:true)
+     
+         IndicatorCategory category2=new IndicatorCategory(code:"preventive",name:"Preventive maintenance",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
+         IndicatorCategory category3=new IndicatorCategory(code:"equipment",name:"Management of medical equipment",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
+         IndicatorCategory category4=new IndicatorCategory(code:"spare_parts",name:"Management of spare parts",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
+         IndicatorCategory category5=new IndicatorCategory(code:"monitoring",name:"Monitoring of MEMMS use",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
+           }
+    
+    
+    
+    
+    
 	public static createUsers() {
 		if(!User.count()){
 			//Default roles

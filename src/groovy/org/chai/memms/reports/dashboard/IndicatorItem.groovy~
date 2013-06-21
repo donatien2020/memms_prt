@@ -1,0 +1,165 @@
+/**
+ * Copyright (c) 2012, Clinton Health Access Initiative.
+ *
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above copyright
+ *       notice, this list of conditions and the following disclaimer in the
+ *       documentation and/or other materials provided with the distribution.
+ *     * Neither the name of the <organization> nor the
+ *       names of its contributors may be used to endorse or promote products
+ *       derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+package org.chai.memms.reports.dashboard
+
+import org.chai.memms.reports.dashboard.LocationReport;
+import org.chai.memms.reports.dashboard.Indicator;
+import org.chai.memms.reports.dashboard.IndicatorValue;
+import org.chai.memms.reports.dashboard.MemmsReport;
+import org.chai.location.CalculationLocation
+import org.chai.location.DataLocationType
+import org.chai.location.DataLocation
+
+
+/**
+ * @author Antoine Nzeyi, Donatien Masengesho, Pivot Access Ltd
+ *
+ */
+class IndicatorItem {
+    String categoryCode
+    Date dateTime
+    String code
+    String name
+    String formula
+    Double value
+    String unit
+    String color
+    List<HistoricalValueItem> historicalValueItems
+    List<ComarisonValueItem> comarisonValueItems
+    List<GeographicalValueItem> geographicalValueItems
+    List<InformationValueItem> informationValueItems
+
+    public IndicatorItem(IndicatorValue iv) {
+        this.categoryCode = iv.indicator.category.code
+        this.dateTime = iv.computedAt
+        this.code = iv.indicator.code
+        this.name = iv.indicator.name
+        this.formula = iv.indicator.formula
+        this.value = iv.computedValue
+        this.unit = iv.indicator.unit
+        Double red = iv.indicator.redToYellowThreshold
+        Double green =  iv.indicator.yellowToGreenThreshold
+        if(red < green) {
+            if(this.value < red) {
+                this.color = "red"
+            } else if(this.value < green) {
+                this.color = "yellow"
+            } else {
+                this.color = "green"
+            }
+        } else {
+            if(this.value > red) {
+                this.color = "red"
+            } else if(this.value > green) {
+                this.color = "yellow"
+            } else {
+                this.color = "green"
+            }
+        }
+        this.historicalValueItems = new ArrayList<HistoricalValueItem>()
+        this.historicalValueItems.add(new HistoricalValueItem(iv))
+        
+          //adding historical values
+          
+       for(IndicatorValue indV :  getHistoricValueIems(iv.indicator)) {
+            this.historicalValueItems.add(new HistoricalValueItem(indV))
+        }
+       
+    }
+
+    public IndicatorItem(IndicatorValue iv, List<IndicatorValue> history) {
+        this.categoryCode = iv.indicator.category.code
+        this.dateTime = iv.computedAt
+        this.code = iv.indicator.code
+        this.name = iv.indicator.name
+        this.formula = iv.indicator.formula
+        this.value = iv.computedValue
+        this.unit = iv.indicator.unit
+        Double l = iv.indicator.redToYellowThreshold
+        Double h =  iv.indicator.yellowToGreenThreshold
+        if(l < h) {
+            if(this.value < l) {
+                this.color = "red"
+            } else if(this.value < h) {
+                this.color = "yellow"
+            } else {
+                this.color = "green"
+            }
+        } else {
+            if(this.value > h) {
+                this.color = "red"
+            } else if(this.value > l) {
+                this.color = "yellow"
+            } else {
+                this.color = "green"
+            }
+        }
+        this.historicalValueItems = new ArrayList<HistoricalValueItem>()
+        this.historicalValueItems.add(new HistoricalValueItem(iv))
+        for(IndicatorValue i : history) {
+            this.historicalValueItems.add(new HistoricalValueItem(i))
+        }
+        
+    }
+    
+    
+    public def getHistoricValueIems(Indicator indicator){
+       
+        def locations=LocationReport.findAll("from LocationReport as locationReport order by locationReport.generatedAt desc limit "+indicator.historyItems+"'")
+        println"how many location reports :"+locations
+         
+        return IndicatorValue.findAllByLocationReportInListAndIndicator(locations,indicator)
+        
+    }
+    public def getComarisonValueItems(Indicator indicator){
+       
+        def locations=LocationReport.findAll("from LocationReport as locationReport order by locationReport.generatedAt desc limit "+indicator.historyItems+"'")
+        println"how many location reports :"+locations
+         
+        return IndicatorValue.findAllByLocationReportInListAndIndicator(locations,indicator)
+        
+    }
+    public def getGeographicalValueItems(Indicator indicator){
+       
+        def locations=LocationReport.findAll("from LocationReport as locationReport order by locationReport.generatedAt desc limit "+indicator.historyItems+"'")
+        println"how many location reports :"+locations
+         
+        return IndicatorValue.findAllByLocationReportInListAndIndicator(locations,indicator)
+        
+    }
+    
+    public def getInformationValueItems(Indicator indicator){
+       
+        def locations=LocationReport.findAll("from LocationReport as locationReport order by locationReport.generatedAt desc limit "+indicator.historyItems+"'")
+        println"how many location reports :"+locations
+         
+        return IndicatorValue.findAllByLocationReportInListAndIndicator(locations,indicator)
+        
+    }
+    
+}
