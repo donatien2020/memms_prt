@@ -45,12 +45,7 @@ class DashboardController extends AbstractController {
 
     def indicators = {
         
-           
-
-       
-               
-
-      
+  
         LocationReport report = getUserReport()
         
         List<IndicatorItem> indicatorItems = new ArrayList<IndicatorItem>()
@@ -67,9 +62,8 @@ class DashboardController extends AbstractController {
                 }
             }
             
-            println" items ok???????????????????????????????????????????????????????????? :"+indicatorItems
-        }else
-        println"report is null <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+           
+        }
         def model = [categoryItems: categoryItems]
         render(view:"/reports/reports", model:model << [
                 template:"/reports/dashboard/dashboard"

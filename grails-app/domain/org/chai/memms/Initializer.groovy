@@ -123,8 +123,6 @@ public class Initializer {
     
     public static createCategories(){
          IndicatorCategory category1=new IndicatorCategory(code:"corrective",name:"Corrective maintenance",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
-         Indicator indicator1=new Indicator(code:"",name:"",description:"",formula:"",unit:"",redToYellowThreshold:"",yellowToGreenThreshold:"",historicalPeriod:"",historyItems:"",queryScript:"",sqlQuery:1,active:1,groupName:"",groupQueryScript:"").save(failOnError: true, flush:true)
-     
          IndicatorCategory category2=new IndicatorCategory(code:"preventive",name:"Preventive maintenance",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
          IndicatorCategory category3=new IndicatorCategory(code:"equipment",name:"Management of medical equipment",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
          IndicatorCategory category4=new IndicatorCategory(code:"spare_parts",name:"Management of spare parts",redToYellowThreshold:60,yellowToGreenThreshold:80).save(failOnError: true, flush:true)
