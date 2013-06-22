@@ -109,16 +109,16 @@ class IndicatorComputationService {
             IndicatorValue indicatorValue=new IndicatorValue(computedAt: currentDate, locationReport: locationReport, indicator: indicator, computedValue:compvalue).save()
        
             
-//            if(indicatorValue!=null){
-//            Map<String,Double> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
-//        
-//            if(map!=null)
-//            for (Map.Entry<String, String> entry : (Set)map.entrySet()) {
-//             
-//                def groupIndicatorValue=new GroupIndicatorValue(generatedAt:currentDate,name:entry.getKey(),value:entry.getValue(),indicatorValue:indicatorValue).save()
-//          
-//                }
-//        }
+            if(indicatorValue!=null){
+            Map<String,Double> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
+        
+            if(map!=null)
+            for (Map.Entry<String, String> entry : (Set)map.entrySet()) {
+                    println"creating object ok :"+entry
+                def groupIndicatorValue=new GroupIndicatorValue(generatedAt:currentDate,name:entry.getKey(),value:entry.getValue(),indicatorValue:indicatorValue).save()
+          
+                }
+        }
     }
         
    
