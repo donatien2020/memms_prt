@@ -87,6 +87,7 @@ class IndicatorComputationService {
         for(Location nation : Location.findAllByLevel(nationalLevel)) {
            
             computeLocationReport(currentDate, nation, memmsReport)
+           
         }
 
         for(Location province : Location.findAllByLevel(provinceLevel)) {
@@ -114,7 +115,7 @@ class IndicatorComputationService {
         
             if(map!=null)
             for (Map.Entry<String, String> entry : (Set)map.entrySet()) {
-                    println"creating object ok :"+entry
+                  
                 def groupIndicatorValue=new GroupIndicatorValue(generatedAt:currentDate,name:entry.getKey(),value:entry.getValue(),indicatorValue:indicatorValue).save()
           
                 }

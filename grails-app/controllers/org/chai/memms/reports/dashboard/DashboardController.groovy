@@ -34,6 +34,7 @@ import org.chai.memms.AbstractController
 import org.chai.location.Location
 import org.chai.memms.inventory.EquipmentType
 import java.lang.reflect.*;
+
 /**
  * @author Antoine Nzeyi, Donatien Masengesho, Pivot Access Ltd
  *
@@ -44,9 +45,9 @@ class DashboardController extends AbstractController {
     def indicatorComputationService
 
     def indicators = {
-        
-         indicatorComputationService.computeCurrentReport()
-        LocationReport report = getUserReport()
+  
+      
+       LocationReport report = getUserReport()
         
         List<IndicatorItem> indicatorItems = new ArrayList<IndicatorItem>()
         Map<String, CategoryItem> categoryItems = new HashMap<String, CategoryItem>()

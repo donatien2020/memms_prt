@@ -46,12 +46,18 @@ class BootStrap {
     def init = { servletContext ->
         switch (GrailsUtil.environment) {
         case "development":
-            //Initializer.createDummyStructure();
-            //Initializer.createUsers();
-            //Initializer.createInventoryStructure()
-            //Initializer.createCorrectiveMaintenanceStructure()
-            //Initializer.createPreventiveMaintenanceStructure()
-            //Initializer.createSparePartStructure()
+           
+//            Initializer.createDummyStructure();
+//            Initializer.createUsers();
+//            Initializer.createInventoryStructure()
+//            Initializer.createCorrectiveMaintenanceStructure()
+//            Initializer.createPreventiveMaintenanceStructure()
+//            Initializer.createSparePartStructure()
+            
+//             Initializer.createCategories()
+//             Initializer.createUserDefinedValiable()
+//             Initializer.createIndicators()
+              
             break;
         case "production":
             break;
