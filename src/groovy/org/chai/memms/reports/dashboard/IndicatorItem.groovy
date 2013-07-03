@@ -105,7 +105,7 @@ class IndicatorItem {
         this.lowestComparisonValueItems= new ArrayList<ComparisonValueItem>()
         this.valuesPerGroup=new HashMap<String,Double>()
         
-        this.historicalValueItems.add(new HistoricalValueItem(iv))
+       
        
         this.geographicalValueItems.add(new GeographicalValueItem(iv))
         
