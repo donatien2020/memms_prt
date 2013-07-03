@@ -1,2 +1,81 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites />
+<testsuites>
+  <testsuite errors="0" failures="0" hostname="elephent" id="0" name="IndicatorCategorySpec" package="org.chai.memms.reports.dashboard" tests="1" time="0.558" timestamp="2013-07-02T18:46:19">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.IndicatorCategorySpec" name="indicator category is valid" time="0.557" />
+
+      <system-out><![CDATA[--Output from indicator category is valid--
+]]></system-out>
+
+      <system-err><![CDATA[--Output from indicator category is valid--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="elephent" id="1" name="IndicatorSpec" package="org.chai.memms.reports.dashboard" tests="1" time="0.946" timestamp="2013-07-02T18:46:17">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.IndicatorSpec" name="indicator is valid" time="0.76" />
+
+      <system-out><![CDATA[--Output from indicator is valid--
+ category is :IndicatorCategory[#id = 1, code = corrective]
+]]></system-out>
+
+      <system-err><![CDATA[--Output from indicator is valid--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="elephent" id="2" name="IndicatorValueSpec" package="org.chai.memms.reports.dashboard" tests="1" time="0.88" timestamp="2013-07-02T18:46:18">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.IndicatorValueSpec" name="indicator Valueis valid" time="0.706" />
+
+      <system-out><![CDATA[--Output from indicator Valueis valid--
+ category is :IndicatorCategory[#id = 1, code = preventive]
+ the created indicatorValue :IndicatorValue[#id = 1, @1372790778586]
+]]></system-out>
+
+      <system-err><![CDATA[--Output from indicator Valueis valid--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="elephent" id="3" name="LocationReportSpec" package="org.chai.memms.reports.dashboard" tests="1" time="2.577" timestamp="2013-07-02T18:46:12">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.LocationReportSpec" name="location report is valid" time="2.341" />
+
+      <system-out><![CDATA[--Output from location report is valid--
+ the created location report  with null location is :LocationReport[#id = 1, @1372790775118]
+]]></system-out>
+
+      <system-err><![CDATA[--Output from location report is valid--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="elephent" id="4" name="MemmsReportSpec" package="org.chai.memms.reports.dashboard" tests="1" time="0.672" timestamp="2013-07-02T18:46:18">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.MemmsReportSpec" name="Memms Report is valid" time="0.359" />
+
+      <system-out><![CDATA[--Output from Memms Report is valid--
+ category is :MemmsReport[#id = 1, @1372790779245]
+]]></system-out>
+
+      <system-err><![CDATA[--Output from Memms Report is valid--
+]]></system-err>
+
+  </testsuite>
+  <testsuite errors="0" failures="0" hostname="elephent" id="5" name="UserDefinedVariableSpec" package="org.chai.memms.reports.dashboard" tests="1" time="1.54" timestamp="2013-07-02T18:46:15">
+      <properties />
+
+      <testcase classname="org.chai.memms.reports.dashboard.UserDefinedVariableSpec" name="user defined valiable is valid" time="1.317" />
+
+      <system-out><![CDATA[--Output from user defined valiable is valid--
+ user defined value :UserDefinedVariable[#id = 1, code = WO_REINCIDENCE_DAYS]
+]]></system-out>
+
+      <system-err><![CDATA[--Output from user defined valiable is valid--
+]]></system-err>
+
+  </testsuite>
+</testsuites>

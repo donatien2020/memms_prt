@@ -75,7 +75,7 @@ class IndicatorComputationService {
 
         // 4. COMPUTE REPORT FOR ALL FACILITIES
         for(DataLocation facility : DataLocation.findAll()) {
-          // computeLocationReport(currentDate, facility, memmsReport)
+           computeLocationReport(currentDate, facility, memmsReport)
         }
 
         // 5. COMPUTE REPORTS FOR ALL MAJOR LOCATIONS(NATION, PROVINCES, DISTRICTS)
@@ -91,10 +91,10 @@ class IndicatorComputationService {
         }
 
         for(Location province : Location.findAllByLevel(provinceLevel)) {
-           // computeLocationReport(currentDate, province, memmsReport)
+            computeLocationReport(currentDate, province, memmsReport)
         }
         for(Location district : Location.findAllByLevel(districtLevel)) {
-            // computeLocationReport(currentDate, district, memmsReport)
+             computeLocationReport(currentDate, district, memmsReport)
         }
          
         
@@ -111,7 +111,7 @@ class IndicatorComputationService {
        
             
             if(indicatorValue!=null){
-            Map<String,Double> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
+                Map<String,BigDecimal> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
         
             if(map!=null)
             for (Map.Entry<String, String> entry : (Set)map.entrySet()) {

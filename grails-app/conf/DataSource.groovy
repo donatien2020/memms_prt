@@ -173,22 +173,9 @@ environments {
     }
     test {
         dataSource {
-            dbCreate = "update"
-            driverClassName = "com.mysql.jdbc.Driver"
-            username = "memmsuser"
-            password = "memms123"
-            url = "jdbc:mysql://localhost/memmsdb_test"
-            pooled = true
-            properties {
-                maxActive = -1
-                minEvictableIdleTimeMillis=1800000
-                timeBetweenEvictionRunsMillis=1800000
-                numTestsPerEvictionRun=3
-                testOnBorrow=true
-                testWhileIdle=true
-                testOnReturn=true
-                validationQuery="SELECT 1"
-            }
+            dbCreate = "crate-drop"
+            url = "jdbc:h2:mem:testDb;MVCC=TRUE"
+            
         }
     }
     production {

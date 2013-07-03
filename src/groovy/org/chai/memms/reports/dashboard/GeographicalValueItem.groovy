@@ -32,18 +32,24 @@ class GeographicalValueItem {
         this.unit = iv.indicator.unit
         this.dataLocation = iv.locationReport.location.names
        
-        if(iv.locationReport.location.coordinates!=null){
-            Matcher match =  this.cordinates.matcher(iv.locationReport.location.coordinates.replace('[[[',""))
         
+        if(iv.locationReport.location.coordinates!=null){
+            
+            Matcher match =  this.cordinates.matcher(iv.locationReport.location.coordinates.replace('[[[',""))
+        println"coordinates :"+iv.locationReport.location.coordinates.replace('[[[',"")
             def i=0
             while (match.find()) {
+               
                 if(i>0)
                 break
                 String[] token= match.group().replace("[","").replace("]","").split(",")
-         
+        
+            if(token[0]!=null&&token[1]!=null){
                 this.latitude=token[0]
                 this.longitude=token[1]
+               
                 i++
+            }
             }
         }
      
@@ -73,7 +79,7 @@ class GeographicalValueItem {
     
  @Override
     public String toString() {
-        return "GeographicalValueItem[dataLocation:" +dataLocation + "value:"+value+" Latitude :"+latitude+"Longitude"+longitude+ "]"
+        return "GeographicalValueItem[dataLocation:" +this.dataLocation + "value:"+this.value+" Latitude :"+this.latitude+"Longitude"+this.longitude+ "]"
     }	
 	
 }

@@ -124,6 +124,7 @@ class IndicatorItem {
        
         for(IndicatorValue indV : getGeographicalValueItems(iv)) {
             this.geographicalValueItems.add(new GeographicalValueItem(indV))
+          //  println" values :"+this.geographicalValueItems
            
         }
        

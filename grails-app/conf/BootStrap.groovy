@@ -44,16 +44,16 @@ import org.omg.CORBA.INITIALIZE;
 class BootStrap {
 
     def init = { servletContext ->
-        switch (GrailsUtil.environment) {
+        switch (GrailsUtil.environment) {                                                                                                                                                                                                                 
         case "development":
-           
+                                             
 //            Initializer.createDummyStructure();
 //            Initializer.createUsers();
 //            Initializer.createInventoryStructure()
 //            Initializer.createCorrectiveMaintenanceStructure()
 //            Initializer.createPreventiveMaintenanceStructure()
 //            Initializer.createSparePartStructure()
-            
+//            
 //             Initializer.createCategories()
 //             Initializer.createUserDefinedValiable()
 //             Initializer.createIndicators()

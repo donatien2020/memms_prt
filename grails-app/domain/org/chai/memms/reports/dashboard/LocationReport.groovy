@@ -50,7 +50,7 @@ class LocationReport {
 
     static constraints = {
         generatedAt (blank:false, nullable:false)
-        location (nullable:false)
+        location (nullable:true)
     }
 
     @Override
