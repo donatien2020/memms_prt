@@ -58,17 +58,17 @@ class IndicatorComputationService {
 
     // CONFIGURE THIS METHOD TO BE EXECUTED EVERY DAY
     public def computeCurrentReport() {
-       
+       println"========================================================="
         // 1. GET CURRENT DATE
         DateTime now = DateTime.now()
         Date currentDate = now.toDate()
 
         // 2. REMOVE PREVIOUS REPORTS IN THE SAME MONTH
         
-         GroupIndicatorValue.executeUpdate("delete from GroupIndicatorValue where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
-         IndicatorValue.executeUpdate("delete from IndicatorValue where month(computedAt) = " + now.getMonthOfYear() + " and year(computedAt) = " + now.getYear())
-         LocationReport.executeUpdate("delete from LocationReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
-         MemmsReport.executeUpdate("delete from MemmsReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+       //  GroupIndicatorValue.executeUpdate("delete from GroupIndicatorValue where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+       //  IndicatorValue.executeUpdate("delete from IndicatorValue where month(computedAt) = " + now.getMonthOfYear() + " and year(computedAt) = " + now.getYear())
+        // LocationReport.executeUpdate("delete from LocationReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+        // MemmsReport.executeUpdate("delete from MemmsReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
 
         // 3. SAVE NEW MEMMS REPORT
         MemmsReport memmsReport = new MemmsReport(generatedAt: currentDate).save()
@@ -97,7 +97,7 @@ class IndicatorComputationService {
              computeLocationReport(currentDate, district, memmsReport)
         }
          
-        
+         println"========================end================================="
     }
 
     def computeLocationReport(Date currentDate, CalculationLocation location, MemmsReport memmsReport) {
@@ -111,7 +111,8 @@ class IndicatorComputationService {
        
             
             if(indicatorValue!=null){
-                Map<String,BigDecimal> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
+                println"indicator :"+indicatorValue.indicator+" location :"+location
+                Map<String,Double> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
         
             if(map!=null)
             for (Map.Entry<String, String> entry : (Set)map.entrySet()) {
@@ -139,7 +140,7 @@ def computeIndicatorForLocation(Indicator indicator, CalculationLocation locatio
     } else {
         return 0.0
     }
-    if(dataLocations.size() == DataLocation.count()) {
+    if(dataLocations!=null&& dataLocations.size() == DataLocation.count()) {
         return computeIndicatorForAllDataLocations(indicator)
     }
     return computeIndicatorForDataLocations(indicator, dataLocations)
@@ -213,7 +214,7 @@ def executeSQL(String sql) {
     
 def groupComputeIndicatorForLocation(Indicator indicator, CalculationLocation location) {
     if (location == null) {
-        return 0.0
+        return  null
     }
     List<DataLocation> dataLocations = new ArrayList<DataLocation>()
     if (location instanceof Location) {
@@ -222,9 +223,9 @@ def groupComputeIndicatorForLocation(Indicator indicator, CalculationLocation lo
         dataLocations.add(location)
         dataLocations.addAll(location.manages)
     } else {
-        return 0.0
+        return null
     }
-    if(dataLocations.size() == DataLocation.count()) {
+    if(dataLocations!=null && dataLocations.size() == DataLocation.count()) {
         return groupComputeIndicatorForAllDataLocations(indicator)
     }
     return groupComputeIndicatorForDataLocations(indicator, dataLocations)
@@ -232,7 +233,7 @@ def groupComputeIndicatorForLocation(Indicator indicator, CalculationLocation lo
     
 def groupComputeIndicatorForDataLocations(Indicator indicator, def dataLocations) {
     if(dataLocations == null)
-    return 0.0
+    return null
     String cond = "";
     int counter = 0
     for(DataLocation loc : dataLocations) {
@@ -243,7 +244,7 @@ def groupComputeIndicatorForDataLocations(Indicator indicator, def dataLocations
         counter++
     }
     if(counter == 0) {
-        return 0.0
+        return null
     } else if(counter == 1) {
         return groupComputeIndicatorWithDataLocationCondition(indicator, " = " + cond + " ")
     } else {
