@@ -65,10 +65,10 @@ class IndicatorComputationService {
 
         // 2. REMOVE PREVIOUS REPORTS IN THE SAME MONTH
         
-       //  GroupIndicatorValue.executeUpdate("delete from GroupIndicatorValue where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
-       //  IndicatorValue.executeUpdate("delete from IndicatorValue where month(computedAt) = " + now.getMonthOfYear() + " and year(computedAt) = " + now.getYear())
-        // LocationReport.executeUpdate("delete from LocationReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
-        // MemmsReport.executeUpdate("delete from MemmsReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+         GroupIndicatorValue.executeUpdate("delete from GroupIndicatorValue where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+         IndicatorValue.executeUpdate("delete from IndicatorValue where month(computedAt) = " + now.getMonthOfYear() + " and year(computedAt) = " + now.getYear())
+         LocationReport.executeUpdate("delete from LocationReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
+         MemmsReport.executeUpdate("delete from MemmsReport where month(generatedAt) = " + now.getMonthOfYear() + " and year(generatedAt) = " + now.getYear())
 
         // 3. SAVE NEW MEMMS REPORT
         MemmsReport memmsReport = new MemmsReport(generatedAt: currentDate).save()
@@ -111,7 +111,7 @@ class IndicatorComputationService {
        
             
             if(indicatorValue!=null){
-                println"indicator :"+indicatorValue.indicator+" location :"+location
+                
                 Map<String,Double> map= groupComputeIndicatorForLocation(indicatorValue.indicator,location)
         
             if(map!=null)
