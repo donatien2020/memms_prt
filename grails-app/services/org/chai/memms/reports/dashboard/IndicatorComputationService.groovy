@@ -58,7 +58,7 @@ class IndicatorComputationService {
 
     // CONFIGURE THIS METHOD TO BE EXECUTED EVERY DAY
     public def computeCurrentReport() {
-       println"========================================================="
+       
         // 1. GET CURRENT DATE
         DateTime now = DateTime.now()
         Date currentDate = now.toDate()
@@ -97,7 +97,7 @@ class IndicatorComputationService {
              computeLocationReport(currentDate, district, memmsReport)
         }
          
-         println"========================end================================="
+        
     }
 
     def computeLocationReport(Date currentDate, CalculationLocation location, MemmsReport memmsReport) {
@@ -197,6 +197,7 @@ def computeScript(String script, Boolean sql) {
 def executeHQL(String hql) {
     def ret = 0.0
     def res =  sessionFactory.getCurrentSession().createQuery(hql).list()[0]
+    println"result list:"+res
     if(res != null) {
         ret = res
     }
