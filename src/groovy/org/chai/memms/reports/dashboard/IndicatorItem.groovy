@@ -163,6 +163,8 @@ class IndicatorItem {
        
            
             }
+            
+           
             return IndicatorValue.findAllByLocationReportInListAndIndicator(locationReports,iv.indicator)
         }
         return null
@@ -222,9 +224,7 @@ class IndicatorItem {
                     
                 }
             
-                Collections.sort(listOfHighest);
-          
-                listOfHighest.reverse()
+               
                 
             }else{
                     
@@ -244,7 +244,8 @@ class IndicatorItem {
                             this.lowerComparisonValueItems.add(new ComparisonValueItem(invVs.get(invVs.indexOf(iv)+i)))
                             if(invVs.indexOf(iv)-i>=0)
                             this.higherComparisonValueItems.add(new ComparisonValueItem(invVs.get(invVs.indexOf(iv)-i)))
-                   
+                           
+                            
                         }
              
                     }       
@@ -252,28 +253,27 @@ class IndicatorItem {
                        
                     
                 }
-                Collections.sort(listOfLowest); 
-                listOfLowest.reverse()
                 
+         
             }
                 
             def lowestCounter=0
             def highestcounter=0
         
-            for(IndicatorValue iv:listOfLowest){
+            for(IndicatorValue iv: listOfLowest.reverse()){
                 if(lowestCounter < 3)
                 this.lowestComparisonValueItems.add(new ComparisonValueItem(iv)) 
                 lowestCounter++
             }
            
-            for(IndicatorValue iv:listOfHighest){
+            for(IndicatorValue iv:listOfHighest.reverse()){
                 if(highestcounter < 3)
                 this.highestComparisonValueItems.add(new ComparisonValueItem(iv))
                 highestcounter++
             }
      
         }
-        
+         this.higherComparisonValueItems.reverse()
          
     }
     

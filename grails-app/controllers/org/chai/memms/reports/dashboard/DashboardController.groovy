@@ -47,7 +47,7 @@ class DashboardController extends AbstractController {
     def indicators = {
      
         
-        indicatorComputationService.computeCurrentReport() 
+        //indicatorComputationService.computeCurrentReport() 
        LocationReport report = getUserReport()
         
         List<IndicatorItem> indicatorItems = new ArrayList<IndicatorItem>()

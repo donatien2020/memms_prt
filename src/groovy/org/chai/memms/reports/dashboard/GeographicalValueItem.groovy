@@ -36,7 +36,7 @@ class GeographicalValueItem {
         if(iv.locationReport.location.coordinates!=null){
             
             Matcher match =  this.cordinates.matcher(iv.locationReport.location.coordinates.replace('[[[',""))
-        println"coordinates :"+iv.locationReport.location.coordinates.replace('[[[',"")
+        
             def i=0
             while (match.find()) {
                
