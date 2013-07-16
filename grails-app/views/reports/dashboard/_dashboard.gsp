@@ -1,3 +1,4 @@
+
 <div class="entity-list">
   <div class="heading1-bar"></div>
   <div id="list-grid" class="v-tabs">
@@ -44,20 +45,14 @@
                   <li><a id='info_facility' href="#">Information by ${indicatorItem.groupName}</a></li>
                 </ul>
                 <div id="historic_trend" class='toggled_tab'>
-                  <ul class="v-tabs-nested">
-                    <g:each in="${indicatorItem.historicalValueItems}" var="historicalItem">
-                      <li class="v-tabs-row">
-                        <span class="v-tabs-name">${historicalItem.dateTime}</span>
-                        <span class="v-tabs-formula" style="background: ${historicalItem.color}" > </span>
-                      <g:if test="${historicalItem.unit=='%'}">
-                        <span class="v-tabs-value"><g:formatNumber number="${historicalItem.value}" format="0%"/></span>
-                      </g:if>
-                      <g:if test="${historicalItem.unit!='%'}">
-                        <span class="v-tabs-value"><g:formatNumber number="${historicalItem.value}" type="number"/> ${historicalItem.unit}</span>
-                      </g:if>
-                      </li>
-                    </g:each>
-                  </ul>
+                  <!-- trend start-->
+                 
+                  
+                 <gvisualization:scatterCoreChart elementId="historic_trend_chart_timeline_${indicatorItem.code}" columns="${indicatorItem.historyColumns()}"  data="${indicatorItem.historyData()}"/>
+                 <div id="historic_trend_chart_timeline_${indicatorItem.code}" style='width: 700px; height: 240px;'></div>
+                   
+                  
+                 
                 </div>
                 <div id="comparison">
                   <ul class="v-tabs-nested">

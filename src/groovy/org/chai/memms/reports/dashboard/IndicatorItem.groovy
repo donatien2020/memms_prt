@@ -244,17 +244,9 @@ class IndicatorItem {
                             this.lowerComparisonValueItems.add(new ComparisonValueItem(invVs.get(invVs.indexOf(iv)+i)))
                             if(invVs.indexOf(iv)-i>=0)
                             this.higherComparisonValueItems.add(new ComparisonValueItem(invVs.get(invVs.indexOf(iv)-i)))
-                           
-                            
                         }
-             
                     }       
-      
-                       
-                    
                 }
-                
-         
             }
                 
             def lowestCounter=0
@@ -339,6 +331,20 @@ class IndicatorItem {
         
         
         return dataLocations;
+    }
+    
+    public def historyColumns() {
+        return [['date','Date'],['number','Value']];
+    }
+    
+    public def historyData() {
+        def ret = [];
+        def i = 0;
+        for(HistoricalValueItem h: historicalValueItems) {
+            ret[i] = [h.dateTime,h.value];
+            i++
+        }
+        return ret;
     }
    
     

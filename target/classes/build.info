@@ -1,6 +1,6 @@
 #Grails Metadata file
-#Fri Jul 12 09:07:35 EAT 2013
-app.buildDate=12072013-090734-EAT
-app.gitCommit=c45f8d14538303a9936808550156d53c771f0ee9\n
+#Tue Jul 16 21:49:31 EAT 2013
+app.buildDate=16072013-214931-EAT
+app.gitCommit=a58673e05fa3149d3338242850fdf117c51224d1\n
 app.systemName=elephent
 app.timezone=Africa/Nairobi
