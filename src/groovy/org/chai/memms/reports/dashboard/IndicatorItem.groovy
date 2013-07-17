@@ -64,6 +64,8 @@ class IndicatorItem {
     List<ComparisonValueItem> lowestComparisonValueItems
     List<GeographicalValueItem> geographicalValueItems
     Map<String, Double> valuesPerGroup
+    
+    
   
     public IndicatorItem(IndicatorValue iv) {
         this.categoryCode = iv.indicator.category.code
@@ -338,14 +340,59 @@ class IndicatorItem {
     }
     
     public def historyData() {
-        def ret = [];
-        def i = 0;
+        def ret = []
+        def i = 0
         for(HistoricalValueItem h: historicalValueItems) {
-            ret[i] = [h.dateTime,h.value];
+            
+            ret[i] = [h.dateTime,h.value]
             i++
         }
-        return ret;
+        if(i==0)
+        ret=null
+        return ret
+    }
+    
+    public def historyColors() {
+        def ret = ['red']
+        def i = 0
+        
+        for(HistoricalValueItem h: historicalValueItems) {
+            ret[i] = [h.color]
+            i++
+        }
+       
+        
+        return ret
     }
    
+    public def geoColums(){
+        
+    return [['number', 'Lat'], ['number', 'Lon'],['number', 'Value']]
+    }
     
+    public geoData() {
+        def ret = []
+        def i = 0
+        
+        for(GeographicalValueItem geo: geographicalValueItems) {
+            if((geo.latitude!=null)&&(geo.longitude!=null)) {
+                ret[i] = [geo.latitude,geo.longitude,geo.dataLocation]
+                i++;
+            }
+        }
+        return ret
+    }
+    
+    public geoDataValue() {
+        def ret = []
+        def i = 0
+        
+        for(GeographicalValueItem geo: geographicalValueItems) {
+            if((geo.latitude!=null)&&(geo.longitude!=null)) {
+                ret[i] = [geo.latitude,geo.longitude,geo.value]
+                i++;
+            }
+        }
+        return ret
+    }
 }

@@ -1,4 +1,3 @@
-
 <div class="entity-list">
   <div class="heading1-bar"></div>
   <div id="list-grid" class="v-tabs">
@@ -17,7 +16,7 @@
         <li><input type="checkbox" name="yellow"/><label>Yellow</label></li>
         <li><input type="checkbox" name="red"/><label>Red</label></li>
       </ul>
-      <!-- Categories tabs -->
+     
       <g:each in="${categoryItems}" status="categoryCount" var="mapItem">
         <g:set var="categoryCode" value="${mapItem.key}" />
         <g:set var="categoryItem" value="${mapItem.value}" />
@@ -45,14 +44,11 @@
                   <li><a id='info_facility' href="#">Information by ${indicatorItem.groupName}</a></li>
                 </ul>
                 <div id="historic_trend" class='toggled_tab'>
-                  <!-- trend start-->
-                 
-                  
-                 <gvisualization:scatterCoreChart elementId="historic_trend_chart_timeline_${indicatorItem.code}" columns="${indicatorItem.historyColumns()}"  data="${indicatorItem.historyData()}"/>
-                 <div id="historic_trend_chart_timeline_${indicatorItem.code}" style='width: 700px; height: 240px;'></div>
-                   
-                  
-                 
+                
+                   <g:if test="${indicatorItem.historyData()!=null}">
+                 <gvisualization:scatterCoreChart elementId="historic_trend_chart_timeline_${indicatorItem.code}" title="Historical Trend" columns="${indicatorItem.historyColumns()}"  data="${indicatorItem.historyData()}" colors="${indicatorItem.historyColors()}" enableInteractivity='${true}' hAxis='${{minValue:0;maxValue:15;textStyle: {color: "red";fontSize:12}}}' fontSize="${12}" width="${700}"/>
+                 <div id="historic_trend_chart_timeline_${indicatorItem.code}" style="width:700px; height:340px;"></div>
+                   </g:if>
                 </div>
                 <div id="comparison">
                   <ul class="v-tabs-nested">
@@ -116,7 +112,21 @@
                   </ul>
                 </div>
                 <div id="geo_trend">
-                  <ul class="v-tabs-nested">
+                  
+                  
+                  
+                   <gvisualization:map elementId="map_${indicatorItem.code}" 
+                                       columns="${indicatorItem.geoColums()}" 
+                                       data="${indicatorItem.geoDataValue()}" 
+                                       mapType="${'terrain'}" 
+                                       zoomLevel="${2}" 
+                                       useMapTypeControl="${true}" 
+                                       showLine="${true}" 
+                                       showTip="${true}" />
+                 
+                    <div id="map_${indicatorItem.code}" style="width: 700px; height: 400px"></div>
+                   
+                   <!--<ul class="v-tabs-nested">
                     <g:each in="${indicatorItem.geographicalValueItems}" var="geographicalItem">
                       <li class="v-tabs-row">
                         <span class="v-tabs-name">${geographicalItem.longitude} - ${geographicalItem.latitude}</span>
@@ -129,9 +139,9 @@
                       </g:if>
                       </li>
                     </g:each>
-                  </ul>
+                  </ul>-->
                 </div>
-                <div id="info_facility">
+                <div id="info_facility" style="width:auto; height: 400px; overflow: auto;">
                   <ul class="v-tabs-nested">
                     <g:each in="${indicatorItem.valuesPerGroup}" var="itemsMap">
                       <g:set var="itemKey" value="${itemsMap.key}" />
