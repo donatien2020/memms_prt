@@ -1,3 +1,5 @@
+<%@ page import="org.grails.plugins.google.visualization.util.DateUtil" %>
+<%@ page import="org.grails.plugins.google.visualization.data.Cell; org.grails.plugins.google.visualization.util.DateUtil" %>
 <div class="entity-list">
   <div class="heading1-bar"></div>
   <div id="list-grid" class="v-tabs">
@@ -46,7 +48,7 @@
                 <div id="historic_trend" class='toggled_tab'>
                 
                    <g:if test="${indicatorItem.historyData()!=null}">
-                 <gvisualization:scatterCoreChart elementId="historic_trend_chart_timeline_${indicatorItem.code}" title="Historical Trend" columns="${indicatorItem.historyColumns()}"  data="${indicatorItem.historyData()}" colors="${indicatorItem.historyColors()}" enableInteractivity='${true}' hAxis='${{minValue:0;maxValue:15;textStyle: {color: "red";fontSize:12}}}' fontSize="${12}" width="${700}"/>
+                 <gvisualization:scatterCoreChart elementId="historic_trend_chart_timeline_${indicatorItem.code}" title="Historical Trend" columns="${indicatorItem.historyColumns()}"  data="${indicatorItem.historyData()}" colors="${indicatorItem.historyColors()}"   hAxis="${new Expando(date: Date.parse('yyyy-MM-dd','2011-01-01'), title:"Dates")}" vAxis="${new Expando(title: 'Values', minValue: 0, maxValue: 15)}"  fontSize="${12}" width="${700}" />
                  <div id="historic_trend_chart_timeline_${indicatorItem.code}" style="width:700px; height:340px;"></div>
                    </g:if>
                 </div>
@@ -114,32 +116,20 @@
                 <div id="geo_trend">
                   
                   
-                  
+                   <g:if test="${indicatorItem.geoData()!=null}">
                    <gvisualization:map elementId="map_${indicatorItem.code}" 
                                        columns="${indicatorItem.geoColums()}" 
-                                       data="${indicatorItem.geoDataValue()}" 
+                                       data="${indicatorItem.geoData()}" 
                                        mapType="${'terrain'}" 
                                        zoomLevel="${2}" 
                                        useMapTypeControl="${true}" 
-                                       showLine="${true}" 
-                                       showTip="${true}" />
+                                       showLine="${true}"
+                                       showTip="${true}"
+                                       /></g:if>
                  
                     <div id="map_${indicatorItem.code}" style="width: 700px; height: 400px"></div>
                    
-                   <!--<ul class="v-tabs-nested">
-                    <g:each in="${indicatorItem.geographicalValueItems}" var="geographicalItem">
-                      <li class="v-tabs-row">
-                        <span class="v-tabs-name">${geographicalItem.longitude} - ${geographicalItem.latitude}</span>
-                        <span class="v-tabs-formula" style="background: ${geographicalItem.color}"  original-title="${geographicalItem.longitude} - ${geographicalItem.latitude}">${geographicalItem.longitude} - ${geographicalItem.latitude}</span>
-                      <g:if test="${geographicalItem.unit=='%'}">
-                        <span class="v-tabs-value"><g:formatNumber number="${geographicalItem.value}" format="0%"/></span>
-                      </g:if>
-                      <g:if test="${geographicalItem.unit!='%'}">
-                        <span class="v-tabs-value"><g:formatNumber number="${geographicalItem.value}" type="number"/> ${geographicalItem.unit}</span>
-                      </g:if>
-                      </li>
-                    </g:each>
-                  </ul>-->
+                  
                 </div>
                 <div id="info_facility" style="width:auto; height: 400px; overflow: auto;">
                   <ul class="v-tabs-nested">
@@ -162,3 +152,4 @@
     </div>
   </div>
 </div>
+

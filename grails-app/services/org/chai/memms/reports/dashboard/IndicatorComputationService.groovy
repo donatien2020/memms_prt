@@ -118,7 +118,7 @@ class IndicatorComputationService {
             for (Map.Entry<String, String> entry : (Set)map.entrySet()) {
                   
                 def groupIndicatorValue=new GroupIndicatorValue(generatedAt:currentDate,name:entry.getKey(),value:entry.getValue(),indicatorValue:indicatorValue).save()
-          
+              
                 }
         }
     }
@@ -197,7 +197,7 @@ def computeScript(String script, Boolean sql) {
 def executeHQL(String hql) {
     def ret = 0.0
     def res =  sessionFactory.getCurrentSession().createQuery(hql).list()[0]
-    println"result list:"+res
+   
     if(res != null) {
         ret = res
     }

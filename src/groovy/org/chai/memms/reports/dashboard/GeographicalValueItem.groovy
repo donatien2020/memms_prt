@@ -24,6 +24,7 @@ class GeographicalValueItem {
     String color
     String longitude
     String latitude
+   
     
     
     public GeographicalValueItem(IndicatorValue iv){
@@ -31,7 +32,7 @@ class GeographicalValueItem {
         this.value = iv.computedValue
         this.unit = iv.indicator.unit
         this.dataLocation = iv.locationReport.location.names
-       
+      
         
         if(iv.locationReport.location.coordinates!=null){
             
@@ -45,8 +46,9 @@ class GeographicalValueItem {
                 String[] token= match.group().replace("[","").replace("]","").split(",")
         
             if(token[0]!=null&&token[1]!=null){
-                this.latitude=token[0]
-                this.longitude=token[1]
+                
+                 this.longitude=token[0]
+                 this.latitude=token[1]
                
                 i++
             }

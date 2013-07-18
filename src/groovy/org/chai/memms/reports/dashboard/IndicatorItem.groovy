@@ -367,32 +367,21 @@ class IndicatorItem {
    
     public def geoColums(){
         
-    return [['number', 'Lat'], ['number', 'Lon'],['number', 'Value']]
+    return [['number', 'Lat'], ['number', 'Lon'],['string', 'Location']]
     }
     
     public geoData() {
-        def ret = []
+       def ret = []
         def i = 0
         
         for(GeographicalValueItem geo: geographicalValueItems) {
             if((geo.latitude!=null)&&(geo.longitude!=null)) {
-                ret[i] = [geo.latitude,geo.longitude,geo.dataLocation]
+                ret[i] = [geo.latitude,geo.longitude,geo.dataLocation+"("+geo.value+")"]
                 i++;
             }
         }
         return ret
     }
     
-    public geoDataValue() {
-        def ret = []
-        def i = 0
-        
-        for(GeographicalValueItem geo: geographicalValueItems) {
-            if((geo.latitude!=null)&&(geo.longitude!=null)) {
-                ret[i] = [geo.latitude,geo.longitude,geo.value]
-                i++;
-            }
-        }
-        return ret
-    }
+   
 }
